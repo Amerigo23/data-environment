@@ -3,8 +3,8 @@
 import os
 
 def start():
-    """returns the right message"""
-    pass  # YOUR CODE HERE
+    flask_env = os.getenv('FLASK_ENV', 'empty')
+    return f"Starting in {flask_env} mode..."
 
 if __name__ == "__main__":
     print(start())
